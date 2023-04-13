@@ -6,7 +6,7 @@
         </div>
 
         <div class="settings-block-content">
-            <slot name="content"></slot>
+            <slot></slot>
         </div>
     </div>
 </template>

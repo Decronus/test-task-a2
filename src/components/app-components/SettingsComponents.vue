@@ -2,7 +2,7 @@
     <div class="settings-wrap">
         <settings-block-template title="Звонок через SIP">
             <template #element>
-                <el-switch style="display: block" v-model="sipChecked" active-color="#61C27C" inactive-color="#BABABA">
+                <el-switch style="display: block" v-model="sipChecked" active-color="#2dc574" inactive-color="#BABABA">
                 </el-switch>
             </template>
 

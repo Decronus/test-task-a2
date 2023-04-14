@@ -3,7 +3,7 @@
         <div class="other-block-inputs-wrap">
             <div class="other-block-select-wrap custom-input">
                 <h3>Часовой пояс</h3>
-                <el-select v-model="city" placeholder="Select">
+                <el-select v-model="city">
                     <el-option v-for="item in options" :key="item.city" :label="item.city" :value="item.city">
                     </el-option>
                 </el-select>
@@ -21,6 +21,10 @@
                 <styled-tooltip text="Прямой переход в объявление на источнике">
                     <info-icon />
                 </styled-tooltip>
+            </div>
+
+            <div class="other-block-button_wrap">
+                <el-button type="primary">Сохранить</el-button>
             </div>
         </div>
     </div>
@@ -109,8 +113,19 @@ export default {
 }
 
 .custom-input input:focus {
-    border-color: #61c27c;
+    border-color: #2dc574;
 }
 
+.other-block-button_wrap {
+    margin-top: 10px;
+    padding: 14px 0 50px;
+    border-top: 1px solid #e9e9ea;
+    width: 130%;
+}
 
+.el-button.el-button--primary {
+    background-color: #2dc574;
+    border-color: #2dc574;
+    width: 100%;
+}
 </style>

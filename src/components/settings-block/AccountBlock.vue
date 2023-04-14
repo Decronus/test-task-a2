@@ -60,14 +60,10 @@ h3 {
     gap: 20px;
 }
 
-.el-input__inner {
-    height: 34px;
-    width: 240px;
-    padding: 0 10px;
-}
+
 
 .custom-input input:focus {
-    border-color: #61c27c;
+    border-color: #2dc574;
 }
 
 .input-with-note {

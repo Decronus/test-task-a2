@@ -33,7 +33,7 @@ export default {
     display: flex;
     gap: 10px;
     align-items: center;
-    width: 270px;
+    width: 250px;
 }
 
 .settings-block-content {

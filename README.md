@@ -1,19 +1,25 @@
-# test-task-a2
+# Тестовое задание A2
 
-## Project setup
-```
-npm install
-```
+Выполнил: Алексей Зотин.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Структура проекта
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Папка src – основные материалы проекта:\
+• Папка components - компоненты Vue, используемые в проекте\
+• Папка services - axios-запросы\
+• Папка store - Vuex-store\
+• Папка utils - вспомогательные компоненты: axios instance, константы\
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Использованные технологии
+
+Javascript, Vue.js, Vuex, Element UI, Axios
+
+## Инструкция по запуску
+
+1. Склонировать проект из репозитория.
+2. Перейти в папку с проектом.
+3. Установить все зависимости командой npm i.
+4. При необходимости поменять константы в файле /src/utils/consts.js
+5. Запустить проект командой vue serve.
+
+Сложности с запуском или есть вопросы? Пишите в телегу AlekseyZotin.

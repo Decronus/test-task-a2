@@ -8,7 +8,6 @@
 <script>
 import HeaderComponent from "./components/app-components/HeaderComponent.vue";
 import SettingsComponents from "./components/app-components/SettingsComponents.vue";
-import Queries from "./services/queries.services";
 
 export default {
     name: "App",

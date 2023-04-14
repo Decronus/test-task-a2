@@ -60,8 +60,90 @@ a {
     color: #61c27c;
 }
 
+hr {
+    height: 1px;
+    background-color: #e9e9ea;
+    border: none;
+}
+
 .el-radio {
     font-weight: 400;
     font-size: 14px;
+}
+
+.el-radio__input.is-checked + .el-radio__label {
+    color: #000000;
+}
+
+.el-input__icon {
+    line-height: 0;
+}
+
+.el-select .el-input .el-select__caret {
+    color: #61c27c;
+}
+
+.el-scrollbar__view.el-select-dropdown__list {
+    background: #61c27c;
+}
+
+.el-select-dropdown__item {
+    color: #ffffff;
+}
+
+.el-select-dropdown__item.hover {
+    background: #51a667;
+    color: #ffffff;
+}
+
+.el-select-dropdown__item.selected {
+    color: #ffffff;
+}
+
+.el-select-dropdown__item.hover::before {
+    content: "✓ ";
+}
+
+.el-popper[x-placement^="top"] .popper__arrow {
+    display: none;
+}
+
+.el-checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.el-checkbox__label {
+    font-size: 12px;
+    white-space: normal;
+    line-height: 120%;
+}
+
+.el-checkbox__input.is-checked + .el-checkbox__label {
+    color: #000000;
+}
+
+.el-checkbox__inner {
+    width: 18px;
+    height: 18px;
+    border-color: #61c27c;
+}
+
+.el-checkbox__inner:hover {
+    border-color: #61c27c;
+}
+
+.el-checkbox__inner::after {
+    height: 12px;
+    left: 6px;
+}
+
+.el-checkbox__input.el-checkbox__inner {
+    border-color: #61c27c;
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner {
+    background: #61c27c;
+    border-color: #61c27c;
 }
 </style>

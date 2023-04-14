@@ -24,4 +24,9 @@ export default {
 .el-tooltip__popper.is-dark[x-placement^="bottom"] .popper__arrow::after {
     border-bottom-color: #61c27c;
 }
+
+.el-tooltip__popper.is-dark[x-placement^="top"] .popper__arrow,
+.el-tooltip__popper.is-dark[x-placement^="top"] .popper__arrow::after {
+    border-top-color: #61c27c;
+}
 </style>

@@ -48,12 +48,6 @@ export default {
     width: 370px;
 }
 
-hr {
-    height: 1px;
-    background-color: #e9e9ea;
-    border: none;
-}
-
 .transition-block-radio-item-wrap {
     display: flex;
     justify-content: space-between;

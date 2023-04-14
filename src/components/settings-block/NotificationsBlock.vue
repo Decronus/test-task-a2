@@ -63,12 +63,6 @@ export default {
     width: 370px;
 }
 
-hr {
-    height: 1px;
-    background-color: #e9e9ea;
-    border: none;
-}
-
 .notifications-block-radio-item-wrap {
     display: flex;
     justify-content: space-between;

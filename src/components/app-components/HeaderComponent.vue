@@ -5,11 +5,8 @@
 </template>
 
 <script>
-import { BTooltip } from "bootstrap-vue";
-
 export default {
     name: "header-component",
-    components: { BTooltip },
 };
 </script>
 

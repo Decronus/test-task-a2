@@ -6,24 +6,12 @@
 </template>
 
 <script>
-import HeaderComponent from "./components/HeaderComponent.vue";
-import SettingsComponents from "./components/SettingsComponents.vue";
+import HeaderComponent from "./components/app-components/HeaderComponent.vue";
+import SettingsComponents from "./components/app-components/SettingsComponents.vue";
 
 export default {
     name: "App",
     components: { HeaderComponent, SettingsComponents },
-
-    data() {
-        return {
-            selected: [], // Must be an array reference!
-            options: [
-                { text: "Red", value: "red" },
-                { text: "Green", value: "green" },
-                { text: "Yellow (disabled)", value: "yellow", disabled: true },
-                { text: "Blue", value: "blue" },
-            ],
-        };
-    },
 };
 </script>
 
@@ -61,8 +49,9 @@ h3 {
 
 p {
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 150%;
+    color: #686869;
 }
 
 a {
@@ -73,5 +62,6 @@ a {
 
 .el-radio {
     font-weight: 400;
+    font-size: 14px;
 }
 </style>

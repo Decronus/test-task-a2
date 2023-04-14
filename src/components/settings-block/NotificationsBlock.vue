@@ -9,12 +9,18 @@
 
         <div class="notifications-block-radio-wrap">
             <el-radio v-model="notificationsRadio" label="off">Выкл</el-radio>
+            <hr />
 
             <div class="notifications-block-radio-item-wrap">
                 <el-radio v-model="notificationsRadio" label="push" disabled>Push</el-radio>
+                <styled-tooltip>
+                    <info-icon />
+                </styled-tooltip>
             </div>
+            <hr />
 
             <el-radio v-model="notificationsRadio" label="emain">Email</el-radio>
+            <hr />
 
             <el-radio v-model="notificationsRadio" label="telegramId"
                 ><a href="https://avclick.me/v/AVinfoBot">Telegram ID</a></el-radio
@@ -24,7 +30,10 @@
 </template>
 
 <script>
+import InfoIcon from "../icons/InfoIcon.vue";
+import StyledTooltip from "../styled/StyledTooltip.vue";
 export default {
+    components: { InfoIcon, StyledTooltip },
     name: "notifications-block",
 
     data() {
@@ -40,7 +49,7 @@ export default {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 410px;
+    width: 370px;
 }
 
 .notification-header {
@@ -52,5 +61,17 @@ export default {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+hr {
+    height: 1px;
+    background-color: #e9e9ea;
+    border: none;
+}
+
+.notifications-block-radio-item-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 </style>

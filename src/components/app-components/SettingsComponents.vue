@@ -37,13 +37,12 @@
 </template>
 
 <script>
-import { BFormCheckbox } from "bootstrap-vue";
-import SettingsBlockTemplate from "./SettingsBlockTemplate.vue";
-import AccountBlock from "./settings-block/AccountBlock.vue";
-import NotificationsBlock from "./settings-block/NotificationsBlock.vue";
+import SettingsBlockTemplate from "../settings-block/SettingsBlockTemplate.vue";
+import AccountBlock from "../settings-block/AccountBlock.vue";
+import NotificationsBlock from "../settings-block/NotificationsBlock.vue";
 
 export default {
-    components: { SettingsBlockTemplate, BFormCheckbox, AccountBlock, NotificationsBlock },
+    components: { SettingsBlockTemplate, AccountBlock, NotificationsBlock },
     name: "settings-component",
 
     data() {

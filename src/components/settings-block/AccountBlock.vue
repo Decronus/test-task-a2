@@ -2,12 +2,12 @@
     <div class="account-block-wrap">
         <div class="account-block-input-wrap custom-input">
             <h3>Компания</h3>
-            <el-input v-model="company"></el-input>
+            <el-input v-model="companyName" disabled></el-input>
         </div>
 
         <div class="account-block-input-wrap custom-input">
             <h3>Логин</h3>
-            <el-input v-model="login"></el-input>
+            <el-input v-model="login" disabled></el-input>
         </div>
 
         <div class="account-block-input-wrap custom-input">
@@ -28,17 +28,56 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
     name: "account-block",
 
-    data() {
-        return {
-            company: "Частное лицо",
-            login: "",
-            phone: "",
-            name: "",
-            surname: "",
-        };
+    computed: {
+        companyName: {
+            get() {
+                return this.$store.state.userData?.companyname;
+            },
+            set(value) {
+                this.$store.commit("updateCompanyName", value);
+            },
+        },
+
+        login: {
+            get() {
+                return this.$store.state.userData?.login;
+            },
+            set(value) {
+                this.$store.commit("updateLogin", value);
+            },
+        },
+
+        phone: {
+            get() {
+                return this.$store.state.userData?.phone;
+            },
+            set(value) {
+                this.$store.commit("updatePhone", value);
+            },
+        },
+
+        name: {
+            get() {
+                return this.$store.state.userData?.fname;
+            },
+            set(value) {
+                this.$store.commit("updateName", value);
+            },
+        },
+
+        surname: {
+            get() {
+                return this.$store.state.userData?.surname;
+            },
+            set(value) {
+                this.$store.commit("updateSurname", value);
+            },
+        },
     },
 };
 </script>
@@ -59,8 +98,6 @@ h3 {
     align-items: center;
     gap: 20px;
 }
-
-
 
 .custom-input input:focus {
     border-color: #2dc574;

@@ -8,23 +8,23 @@
         <h3 class="notification-header">Уведомления</h3>
 
         <div class="notifications-block-radio-wrap">
-            <el-radio v-model="notificationsRadio" label="off">Выкл</el-radio>
+            <el-radio v-model="notification" label="-1">Выкл</el-radio>
             <hr />
 
             <div class="notifications-block-radio-item-wrap">
-                <el-radio v-model="notificationsRadio" label="push" disabled>Push</el-radio>
+                <el-radio v-model="notification" label="3" disabled>Push</el-radio>
                 <styled-tooltip text="Можно установить только в приложении">
                     <info-icon />
                 </styled-tooltip>
             </div>
             <hr />
 
-            <el-radio v-model="notificationsRadio" label="emain">Email</el-radio>
+            <el-radio v-model="notification" label="2">Email</el-radio>
             <hr />
 
-            <el-radio v-model="notificationsRadio" label="telegramId"
-                ><a href="https://avclick.me/v/AVinfoBot">Telegram ID</a></el-radio
-            >
+            <el-radio v-model="notification" label="1">
+                <a href="https://avclick.me/v/AVinfoBot">Telegram ID</a>
+            </el-radio>
         </div>
     </div>
 </template>
@@ -40,6 +40,17 @@ export default {
         return {
             notificationsRadio: "push",
         };
+    },
+
+    computed: {
+        notification: {
+            get() {
+                return this.$store.state.userData?.sendMethod;
+            },
+            set(value) {
+                this.$store.commit("updateNotification", value);
+            },
+        },
     },
 };
 </script>

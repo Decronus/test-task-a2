@@ -1,6 +1,6 @@
 <template>
     <div class="header-wrap">
-        <h1 ref="header">Настройки</h1>
+        <h1>Настройки</h1>
     </div>
 </template>
 

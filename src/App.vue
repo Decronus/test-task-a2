@@ -73,9 +73,12 @@ hr {
 
 .el-input__inner {
     height: 34px;
-    width: 240px;
     padding: 0 10px;
     color: #000000;
+}
+
+.el-input__inner.hidden-input {
+    width: 200px;
 }
 
 .el-radio {

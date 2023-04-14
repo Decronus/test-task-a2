@@ -62,6 +62,14 @@ export default new Vuex.Store({
         switchColorLent(state, value) {
             state.userData.colorlenta = value;
         },
+
+        updateEmail(state, value) {
+            state.userData.email = value;
+        },
+
+        updateTelegramChat(state, value) {
+            state.userData.telegramChat = value;
+        },
     },
     actions: {
         fetchUserData({ commit }) {

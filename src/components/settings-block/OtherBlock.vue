@@ -3,7 +3,7 @@
         <div class="other-block-inputs-wrap">
             <div class="other-block-select-wrap custom-input">
                 <h3>Часовой пояс</h3>
-                <el-select v-model="timezone">
+                <el-select v-model="timezone" placeholder="Загрузка...">
                     <el-option v-for="item in options" :key="item.label" :label="item.city" :value="item.index">
                     </el-option>
                 </el-select>
@@ -24,7 +24,13 @@
             </div>
 
             <div class="other-block-button_wrap">
-                <el-button type="primary" :loading="loadingButton" @click="updateUserData">Сохранить </el-button>
+                <el-button
+                    type="primary"
+                    :loading="loadingButton"
+                    @click="updateUserData"
+                    :disabled="!$store.state.userData"
+                    >Сохранить
+                </el-button>
             </div>
         </div>
     </div>
@@ -110,8 +116,12 @@ export default {
 
             Queries.putUpdateUserData(USER_ID, this.$store.state.userData)
                 .then(() => {
-                    console.log("Данные успешно обновлены");
                     this.loadingButton = false;
+
+                    this.$message({
+                        message: "Данные успешно сохранены",
+                        type: "success",
+                    });
                 })
                 .catch((err) => {
                     console.log(err);

@@ -28,8 +28,6 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
-
 export default {
     name: "account-block",
 
@@ -72,7 +70,7 @@ export default {
 
         surname: {
             get() {
-                return this.$store.state.userData?.surname;
+                return this.$store.state.userData?.lname;
             },
             set(value) {
                 this.$store.commit("updateSurname", value);
@@ -91,16 +89,13 @@ h3 {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 370px;
 }
 
 .account-block-input-wrap {
     display: flex;
     align-items: center;
     gap: 20px;
-}
-
-.custom-input input:focus {
-    border-color: #2dc574;
 }
 
 .input-with-note {

@@ -13,7 +13,7 @@
 
             <div class="notifications-block-radio-item-wrap">
                 <el-radio v-model="notificationsRadio" label="push" disabled>Push</el-radio>
-                <styled-tooltip>
+                <styled-tooltip text="Можно установить только в приложении">
                     <info-icon />
                 </styled-tooltip>
             </div>
@@ -38,7 +38,7 @@ export default {
 
     data() {
         return {
-            notificationsRadio: 1,
+            notificationsRadio: "push",
         };
     },
 };
@@ -49,7 +49,6 @@ export default {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 370px;
 }
 
 .notification-header {
@@ -61,6 +60,7 @@ export default {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 370px;
 }
 
 hr {

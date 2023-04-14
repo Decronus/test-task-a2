@@ -21,17 +21,11 @@
         </settings-block-template>
 
         <settings-block-template title="Переход в карточку">
-            <p>
-                Включите эту функцию чтобы Авито и другие площадки не блокировали ваш аккаунт. Будет выглядеть так,
-                будто звонки совершаются с разных номеров.
-            </p>
+            <transition-block />
         </settings-block-template>
 
         <settings-block-template title="Прочие настройки">
-            <p>
-                Включите эту функцию чтобы Авито и другие площадки не блокировали ваш аккаунт. Будет выглядеть так,
-                будто звонки совершаются с разных номеров.
-            </p>
+            <other-block />
         </settings-block-template>
     </div>
 </template>
@@ -40,9 +34,11 @@
 import SettingsBlockTemplate from "../settings-block/SettingsBlockTemplate.vue";
 import AccountBlock from "../settings-block/AccountBlock.vue";
 import NotificationsBlock from "../settings-block/NotificationsBlock.vue";
+import TransitionBlock from "../settings-block/TransitionBlock.vue";
+import OtherBlock from "../settings-block/OtherBlock.vue";
 
 export default {
-    components: { SettingsBlockTemplate, AccountBlock, NotificationsBlock },
+    components: { SettingsBlockTemplate, AccountBlock, NotificationsBlock, TransitionBlock, OtherBlock },
     name: "settings-component",
 
     data() {

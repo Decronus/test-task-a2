@@ -1,18 +1,23 @@
 <template>
-    <el-tooltip class="tooltip" effect="dark" content="Можно установить только в приложении" placement="bottom"
-        ><slot></slot
-    ></el-tooltip>
+    <el-tooltip class="tooltip" effect="dark" :content="text" placement="bottom"><slot></slot></el-tooltip>
 </template>
 
 <script>
 export default {
     name: "styled-tooltip",
+    props: {
+        text: {
+            type: String,
+            required: true,
+        },
+    },
 };
 </script>
 
 <style>
 .el-tooltip__popper.is-dark {
     background: #61c27c;
+    font-weight: 500;
 }
 
 .el-tooltip__popper.is-dark[x-placement^="bottom"] .popper__arrow,

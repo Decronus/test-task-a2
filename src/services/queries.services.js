@@ -1,8 +1,12 @@
 import axiosInstance from "@/utils/axios";
 
 class Queries {
-    getUserById(id) {
+    getUserDataById(id) {
         return axiosInstance.get(`user/${id}`);
+    }
+
+    putUpdateUserData(id, body) {
+        return axiosInstance.put(`user/${id}`, body);
     }
 }
 

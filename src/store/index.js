@@ -15,6 +15,10 @@ export default new Vuex.Store({
             state.userData = payload;
         },
 
+        switchCallType(state, value) {
+            state.userData.calltype = value;
+        },
+
         updateCompanyName(state, value) {
             state.userData.companyname = value;
         },
@@ -35,15 +39,37 @@ export default new Vuex.Store({
             state.userData.lname = value;
         },
 
-        updateSendMethod(state, value) {
+        updateNotification(state, value) {
             state.userData.sendMethod = value;
+        },
+
+        updateRedirect(state, value) {
+            state.userData.redirecttarget = value;
+        },
+
+        updateTimezone(state, value) {
+            state.userData.timezone = value;
+        },
+
+        updateTimezoneString(state, value) {
+            state.userData.timezonestring = value;
+        },
+
+        switchLockLent(state, value) {
+            state.userData.locklentaupdate = value;
+        },
+
+        switchColorLent(state, value) {
+            state.userData.colorlenta = value;
         },
     },
     actions: {
         fetchUserData({ commit }) {
-            Queries.getUserById(USER_ID).then((user) => {
-                commit("setUserData", user.data);
-            });
+            Queries.getUserDataById(USER_ID)
+                .then((user) => {
+                    commit("setUserData", user.data);
+                })
+                .catch((err) => console.log(err));
         },
     },
     modules: {},

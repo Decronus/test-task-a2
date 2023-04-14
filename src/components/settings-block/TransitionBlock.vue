@@ -2,34 +2,40 @@
     <div class="transition-block-wrap">
         <p>Выберите, каким образом будет открываться детальное представление выбранного вами транспорта.</p>
 
-        <div class="transition-block-radio-wrap">
-            <el-radio v-model="transitionRadio" label="current">В карточку в текущем окне</el-radio>
+        <el-radio-group v-model="redirect" class="transition-block-radio-wrap">
+            <el-radio :label="0">В карточку в текущем окне</el-radio>
             <hr />
 
-            <el-radio v-model="transitionRadio" label="blank">В карточку в отдельном окне</el-radio>
+            <el-radio :label="1">В карточку в отдельном окне</el-radio>
             <hr />
 
             <div class="transition-block-radio-item-wrap">
-                <el-radio v-model="transitionRadio" label="source">На источник</el-radio>
+                <el-radio :label="2">На источник</el-radio>
                 <styled-tooltip text="Прямой переход в объявление на источнике">
                     <info-icon />
                 </styled-tooltip>
             </div>
-        </div>
+        </el-radio-group>
     </div>
 </template>
 
 <script>
 import InfoIcon from "../icons/InfoIcon.vue";
 import StyledTooltip from "../styled/StyledTooltip.vue";
+
 export default {
     components: { InfoIcon, StyledTooltip },
     name: "transition-block",
 
-    data() {
-        return {
-            transitionRadio: "current",
-        };
+    computed: {
+        redirect: {
+            get() {
+                return this.$store.state.userData?.redirecttarget;
+            },
+            set(value) {
+                this.$store.commit("updateRedirect", value);
+            },
+        },
     },
 };
 </script>

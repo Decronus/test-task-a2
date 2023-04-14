@@ -2,7 +2,7 @@
     <div class="settings-wrap">
         <settings-block-template title="Звонок через SIP">
             <template #element>
-                <el-switch style="display: block" v-model="sipChecked" active-color="#2dc574" inactive-color="#BABABA">
+                <el-switch style="display: block" v-model="callType" active-color="#2dc574" inactive-color="#BABABA">
                 </el-switch>
             </template>
 
@@ -45,6 +45,17 @@ export default {
         return {
             sipChecked: true,
         };
+    },
+
+    computed: {
+        callType: {
+            get() {
+                return Boolean(+this.$store.state.userData?.calltype);
+            },
+            set(value) {
+                this.$store.commit("switchCallType", String(+value));
+            },
+        },
     },
 };
 </script>

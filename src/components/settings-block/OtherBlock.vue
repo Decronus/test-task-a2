@@ -124,7 +124,12 @@ export default {
                     });
                 })
                 .catch((err) => {
-                    console.log(err);
+                    this.loadingButton = false;
+
+                    this.$message({
+                        message: "Ошибка при сохранении данных, попробуйте еще раз",
+                        type: "error",
+                    });
                 });
         },
     },

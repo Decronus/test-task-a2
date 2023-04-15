@@ -74,6 +74,7 @@ hr {
     height: 34px;
     padding: 0 10px;
     color: #000000;
+    line-height: 0;
 }
 
 .el-input__inner.hidden-input {
